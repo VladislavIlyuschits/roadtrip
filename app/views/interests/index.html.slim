@@ -1,0 +1,15 @@
+.container
+  .main-content
+    .left-main-content
+      = image_tag('logo.png')
+      = image_tag('main.png', height: '700')
+    .middle-main-content
+      = image_tag('music.png')
+    .right-main-content
+      h3 Interview
+      p Choose your interest so we can pick you up tour
+      .interests-button-all
+        - @interests.each do |interest|
+          .interests-button
+            = link_to image_tag("icon#{interest.id}.png"), add_interest_interests_path(id: interest.id), method: :post
+            p #{interest.name}

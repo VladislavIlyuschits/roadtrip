@@ -1,0 +1,21 @@
+.tours-header
+  = image_tag('logo.png', height: '90')
+  .tours-header-buttons
+    .tours-header-settings-button
+      = image_tag('settings-icon.png', height: '30')
+      == link_to 'Settings', edit_user_registration_path
+    .tours-header-logout-button
+      = image_tag('logout-icon.png', height: '30')
+      == link_to 'Log out', destroy_user_session_path
+.tours-content.container
+  = link_to 'Back', events_path(id: @dishes.first.event_id), class: 'btn btn-warning back'
+  .tours-content-center
+    h1 Menu
+    - @dishes.each do |dish|
+      .tours-content-center-tour
+        .tours-content-center-tour-header
+          h4 #{dish.name}
+        - if dish.image.attached?
+          = image_tag dish.image, width: '900', class: 'tours-content-image'
+        p #{dish.description}
+

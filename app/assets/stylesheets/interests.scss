@@ -1,0 +1,18 @@
+.interests-button-all{
+  display: flex;
+  width: 500px;
+  flex-wrap: wrap;
+}
+
+.interests-button{
+  margin-right: 10px;
+}
+
+.interests-button img{
+  border: 2px solid #FFC500;
+  border-radius: 12px;
+}
+
+.interests-button img:hover{
+  border: 2px solid white;
+}

@@ -1,0 +1,22 @@
+.tours-header
+  = image_tag('logo.png', height: '90')
+  .tours-header-buttons
+    .tours-header-settings-button
+      = image_tag('settings-icon.png', height: '30')
+      == link_to 'Settings', edit_user_registration_path
+    .tours-header-logout-button
+      = image_tag('logout-icon.png', height: '30')
+      == link_to 'Log out', destroy_user_session_path
+.tours-content.container
+  .tours-content-center
+    h1 = @tours.first.interest.name
+    - @tours.each do |tour|
+      .tours-content-center-tour
+        .tours-content-center-tour-header
+          .tours-content-center-tour-header-title
+            h5 #{tour.name}
+            h7 #{tour.starts_at}
+          = button_to 'Join', add_tour_tours_path(id: tour.id), method: :post, class: 'btn btn-warning'
+        - if tour.image.attached?
+          = image_tag tour.image, height: '500', class: 'tours-content-image'
+        p #{tour.description}

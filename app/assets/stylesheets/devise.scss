@@ -1,0 +1,24 @@
+@import "bootstrap";
+body{
+  background-color: #FFC500;
+}
+.main-content{
+  display: flex;
+  justify-content: space-around;
+}
+
+.left-main-content{
+  display: flex;
+  flex-direction: column;
+
+}
+.middle-main-content{
+  align-self: flex-end;
+}
+.right-main-content{
+  align-self: center;
+}
+
+.form-actions input{
+  margin-right: 20px;
+}
