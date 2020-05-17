@@ -7,7 +7,7 @@ ruby '2.6.0'
 
 gem 'administrate', '0.10.0'
 gem 'administrate-field-active_storage', '~> 0.1.2'
-gem 'bootstrap', '4.1.3'
+gem 'bootstrap', '4.3.1'
 gem 'devise', '4.7.1'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 3.12'
