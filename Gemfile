@@ -13,7 +13,7 @@ gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 3.12'
 gem 'rails', '~> 5.2.1'
 gem 'sass-rails', '~> 5.0'
-gem 'simple_form', '4.0.1'
+gem 'simple_form', '5.0.0'
 gem 'slim-rails', '3.1.3'
 gem 'uglifier', '>= 1.3.0'
 gem 'bootsnap', '>= 1.1.0', require: false
